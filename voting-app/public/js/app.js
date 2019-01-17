@@ -1,19 +1,20 @@
 class ProductList extends React.Component {
-    constructor(props) {
-        super(props);
+    /* New JS feature: Property Initializer.
+       By using the arrow function like this, it automatically binds "this"
+       inside the function to the component. No need to manually do it in the
+       constructor.
+       This feature also lets us define the initial state outside the constructor.
+       Since it's new we use Babel's transform-class-properties plugin.  */
 
-        this.state = {
-            products: []
-        };
-
-        this.handleProductUpVote = this.handleProductUpVote.bind(this);
-    }
+     state = {
+         products: []
+     };
 
     componentDidMount() {
         this.setState({ products: Seed.products });
     }
 
-    handleProductUpVote(productId) {
+    handleProductUpVote = (productId) => {
         const nextProducts = this.state.products.map((product) => {
             if (product.id === productId) {
                 return Object.assign({}, product, {
@@ -27,7 +28,7 @@ class ProductList extends React.Component {
         this.setState({
             products: nextProducts
         })
-    }
+    };
 
     render() {
         const products = this.state.products.sort((a,b) => (b.votes - a.votes));
@@ -55,15 +56,10 @@ class ProductList extends React.Component {
 }
 
 class Product extends React.Component {
-    constructor(props) {
-        super(props);
 
-        this.handleUpVote = this.handleUpVote.bind(this);
-    }
-
-    handleUpVote() {
-        this.props.onVote(this.props.id);
-    }
+    handleUpVote= () => (
+        this.props.onVote(this.props.id)
+    );
 
     render () {
         return (
