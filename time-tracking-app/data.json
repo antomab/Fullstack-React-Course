@@ -14,17 +14,16 @@
         "runningSince": null
     },
     {
-        "title": "Ponder origins of universe",
-        "project": "Life Chores",
-        "id": "2c43306e-5b44-4ff8-8753-33c35adbd06f",
-        "elapsed": 91582731889,
-        "runningSince": null
-    },
-    {
         "title": "test",
         "project": "test test",
         "id": "b31af1e0-6025-4af3-b226-825de2a66af7",
         "elapsed": 2974,
+        "runningSince": null
+    },
+    {
+        "title": "testing out",
+        "project": "react course",
+        "elapsed": 15657,
         "runningSince": null
     }
 ]
