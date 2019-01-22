@@ -20,7 +20,7 @@ class TimersDashboard extends React.Component {
         const t = helpers.newTimer(timer);
         this.setState({ timers: this.state.timers.concat(t) });
 
-        client.createTimer(timer);
+        client.createTimer(t);
     };
 
     updateTimer = (attrs) => {

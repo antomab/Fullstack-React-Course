@@ -14,16 +14,10 @@
         "runningSince": null
     },
     {
-        "title": "test",
-        "project": "test test",
-        "id": "b31af1e0-6025-4af3-b226-825de2a66af7",
-        "elapsed": 2974,
-        "runningSince": null
-    },
-    {
-        "title": "testing out",
-        "project": "react course",
-        "elapsed": 15657,
+        "title": "test id",
+        "project": "QA",
+        "id": "bdd73b31-de18-4bce-8d49-afecab1c37d3",
+        "elapsed": 0,
         "runningSince": null
     }
 ]
